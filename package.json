@@ -24,11 +24,11 @@
     "@babel/runtime": "^7.6.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "babel:transpile": "babel --presets @babel/react --plugins @babel/plugin-proposal-class-properties ./src/node_modules/devjs7-components/src --out-dir ./src/node_modules/devjs7-components/lib",
+    "start": "npm run babel:transpile && react-scripts start",
+    "build": "npm run babel:transpile && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "babel": "babel ./src/node_modules/devjs7-components/src --out-dir ./src/node_modules/devjs7-components/lib"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
