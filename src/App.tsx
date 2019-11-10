@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {FunctionComponent, useEffect, useRef, useState} from 'react';
 import {
     ReactRegulator,
     ReactRegulatorProps,
@@ -11,7 +11,7 @@ import {
 import './App.css';
 import _ from 'lodash';
 
-const App = () => {
+const App: FunctionComponent<{}> = () => {
 
     const [value, setValue] = useState<string>("50");
     const ref = useRef<WebComponentRegulator>(null);
