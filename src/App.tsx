@@ -13,7 +13,6 @@ import _ from 'lodash';
 
 const App = () => {
 
-
     const [value, setValue] = useState<string>("50");
     const ref = useRef<WebComponentRegulator>(null);
     let parsedValue = _.clamp(parseInt(value), 0, 100) || 0;
